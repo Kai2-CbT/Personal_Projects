@@ -1,24 +1,32 @@
-document.getElementById("header_1").textContent = "Counter App";
+document.getElementById("header_1").textContent = "Random Number Generators";
 
-//declare variable to hold counter num + assign to 0.
-let counter = 0;
-//display counter on screen
-document.getElementById("counter_display").textContent = counter;
+//declare variable to hold dice values.
+let dice_1;
+let dice_2;
+let dice_3; 
 
-//on click funtion to increase
-document.getElementById("increaseBtn").onclick = function() {
-    counter++;
-    document.getElementById("counter_display").textContent = counter;
+//declare min and max for dice rolls
+const min = 1;
+const max = 6;
+
+
+//display dice on screen
+document.getElementById("dice_2_display").textContext = dice_2;
+document.getElementById("dice_3_display").textContent = dice_3;
+
+//add functionality to each button
+
+document.getElementById("roll_Dice1").onclick = function(){
+    dice_1 = Math.floor(Math.random() * max) + min;
+    document.getElementById("dice_1_display").textContent = dice_1;
+
 };
 
-//on click function to reset
-document.getElementById("resetBtn").onclick = function() {
-    counter = 0;
-    document.getElementById("counter_display").textContent = counter;
+document.getElementById("roll2Dice").onclick = function(){
+
 };
 
-//onclick function to decrease
-document.getElementById("decreaseBtn").onclick = function(){
-    counter--;
-    document.getElementById("counter_display").textContent = counter;
-}
+document.getElementById("roll3Dice").onclick = function(){
+
+};
+
