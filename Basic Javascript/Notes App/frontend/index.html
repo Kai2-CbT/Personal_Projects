@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>random Number Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Pixel Notes</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 id="header_1"></h1>
-    <div id="dice_display">
-    <h2 id="dice_1_display"></h2>
-    <h2 id="dice_2_display"></h2>
-    <h2 id="dice_3_display"></h2>
-    </div>
+  <main class="app">
+    <header>
+      <div class="pixel-cat">ฅ^•ﻌ•^ฅ</div>
+      <h1>Cozy Pixel Notes</h1>
+      <p class="subtitle">tiny thoughts, soft colors, warm vibes</p>
+    </header>
 
-    <div class="buttons">
-        <button id="rollDice_1">Roll 1 Die</button>
-        <button id="roll2Dice">Roll 2 Dice</button>
-        <button id="roll3Dice">Roll 3 Dice</button>
-    </div>
+    <section class="notes-layout">
+      <div class="note-editor">
+        <h2>New Note</h2>
+        <input type="text" placeholder="Note title..." />
+        <textarea placeholder="Write something cozy..."></textarea>
+        <button>Save Note ✦</button>
+      </div>
 
+      <div class="notes-list">
+        <div class="note-card">
+          <h2>Morning</h2>
+          <p>Drink tea, open the window, and write one small idea.</p>
+        </div>
 
-    <div class="total_display">
-        
-        <h3>Dice Total</h3>
-        <label id="total_counter"></label>
-    </div>
-    <script src="index.js"></script>
+        <div class="note-card">
+          <h2>Game Ideas</h2>
+          <p>A pixel frog runs a tiny café in the rain.</p>
+        </div>
+
+        <div class="note-card">
+          <h2>Reminder</h2>
+          <p>Save your JavaScript file before refreshing!</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

@@ -1,36 +1,108 @@
+    body {
+      margin: 0;
+      font-family: "Courier New", monospace;
+      background: #f8e8f0;
+      color: #5c4a5a;
+      image-rendering: pixelated;
+    }
 
-/* Use # for id, . for class, tagname for regular tags*/
-#header_1{
-    text-align: center;
-    font-family: helvetica;
-    color: rgb(42, 193, 168);
-}
+    .app {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 24px;
+    }
 
-#dice_display{
-    justify-content: center;
-    font-size: 1em;
-    font-family: helvetica;
-    display: flex;
-    gap: 7em;
-    color: darkgreen;
-}
+    header {
+      text-align: center;
+      background: #d8f3dc;
+      border: 4px solid #5c4a5a;
+      box-shadow: 8px 8px 0 #b8c0ff;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
 
-.buttons{
-    text-align: center;
-}
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-button{
-    padding: 1em 2em;
-    background-color: rgb(237, 124, 210);
-    transition: 0.5s;
-    border-radius: 5px;
-}
+    .subtitle {
+      margin-top: 8px;
+      color: #7b6278;
+    }
 
-button:hover{
-    background-color: rgb(230, 216, 239);
-}
+    .notes-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
 
-.total_display{
-    text-align: center;
-    font-size: 3em;
-}
+    .note-editor,
+    .note-card {
+      background: #fff1c1;
+      border: 4px solid #5c4a5a;
+      box-shadow: 6px 6px 0 #ffc8dd;
+      padding: 18px;
+    }
+
+    input,
+    textarea,
+    button {
+      font-family: inherit;
+      border: 3px solid #5c4a5a;
+      background: #ffffff;
+      color: #5c4a5a;
+      padding: 12px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      height: 180px;
+      resize: none;
+      background: #fefae0;
+    }
+
+    button {
+      background: #cdb4db;
+      cursor: pointer;
+      box-shadow: 4px 4px 0 #5c4a5a;
+      font-weight: bold;
+    }
+
+    button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #5c4a5a;
+    }
+
+    .notes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .note-card:nth-child(2) {
+      background: #bde0fe;
+    }
+
+    .note-card:nth-child(3) {
+      background: #ffd6a5;
+    }
+
+    .note-card h2 {
+      margin-top: 0;
+    }
+
+    .pixel-cat {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .notes-layout {
+        grid-template-columns: 1fr;
+      }
+    }
