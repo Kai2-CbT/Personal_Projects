@@ -6,11 +6,13 @@
     color: rgb(42, 193, 168);
 }
 
-#counter_display{
-    text-align: center;
-    font-size: 5em;
+#dice_display{
+    justify-content: center;
+    font-size: 1em;
     font-family: helvetica;
-    color: rgb(205, 59, 218);
+    display: flex;
+    gap: 7em;
+    color: darkgreen;
 }
 
 .buttons{
@@ -26,4 +28,9 @@ button{
 
 button:hover{
     background-color: rgb(230, 216, 239);
+}
+
+.total_display{
+    text-align: center;
+    font-size: 3em;
 }
