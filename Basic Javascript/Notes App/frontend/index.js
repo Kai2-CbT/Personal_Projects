@@ -1,3 +1,5 @@
+/*
+
 document.getElementById("header_1").textContent = "Random Number Generators";
 
 //declare variable to hold dice values.
@@ -59,5 +61,33 @@ document.getElementById("roll3Dice").onclick = function(){
 
     total.textContent = totalValue;
 };
+*/
 
 
+  const titleInput = document.querySelector("input");
+  const noteInput = document.querySelector("textarea");
+  const saveButton = document.querySelector("button");
+  const notesList = document.querySelector(".notes-list");
+
+  saveButton.onclick = function () {
+    const title = titleInput.value;
+    const note = noteInput.value;
+
+    if (title === "" || note === "") {
+      alert("Please write a title and note!");
+      return;
+    }
+
+    const noteCard = document.createElement("div");
+    noteCard.className = "note-card";
+
+    noteCard.innerHTML = `
+      <h2>${title}</h2>
+      <p>${note}</p>
+    `;
+
+    notesList.appendChild(noteCard);
+
+    titleInput.value = "";
+    noteInput.value = "";
+  };
