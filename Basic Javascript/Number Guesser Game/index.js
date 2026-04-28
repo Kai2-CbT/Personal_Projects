@@ -1,63 +1,25 @@
-document.getElementById("header_1").textContent = "Random Number Generators";
+//logic:
 
-//declare variable to hold dice values.
-let dice_1;
-let dice_2;
-let dice_3; 
+//on button press, run a function
 
-//declare min and max for dice rolls
-const min = 1;
-const max = 6;
+//function should have a while loop that runs until answer is correct
 
+//need to have a variable that holds the state of the game
 
-//display dice on screen
-document.getElementById("dice_2_display").textContext = dice_2;
-document.getElementById("dice_3_display").textContent = dice_3;
-
-//add functionality to each button
-
-document.getElementById("rollDice_1").onclick = function() {
-    dice_1 = Math.floor(Math.random() * max) + min;
-    document.getElementById("dice_1_display").textContent = dice_1;
-    document.getElementById("dice_2_display").textContent = "";
-    document.getElementById("dice_3_display").textContent = "";
-
-let total = document.getElementById("total_counter");
-    let totalValue;
-
-    totalValue = dice_1;
-
-    total.textContent = totalValue;
-};
-
-document.getElementById("roll2Dice").onclick = function(){
-    dice_1 = Math.floor(Math.random() * max) + min;
-    dice_2 = Math.floor(Math.random() * max) + min;
-    document.getElementById("dice_1_display").textContent = dice_1;
-    document.getElementById("dice_2_display").textContent = dice_2;
-    document.getElementById("dice_3_display").textContent = "";
-
-    let total = document.getElementById("total_counter");
-    let totalValue;
-
-    totalValue = dice_1 + dice_2;
-
-    total.textContent = totalValue;
-};
-
-document.getElementById("roll3Dice").onclick = function(){
-    dice_1 = Math.floor(Math.random() * max) + min;
-    dice_2 = Math.floor(Math.random() * max) + min;
-    dice_3 = Math.floor(Math.random() * max) + min;
-    document.getElementById("dice_1_display").textContent = dice_1;
-    document.getElementById("dice_2_display").textContent = dice_2;
-    document.getElementById("dice_3_display").textContent = dice_3;
-    let total = document.getElementById("total_counter");
-    let totalValue;
-
-    totalValue = dice_1 + dice_2 + dice_3;
-
-    total.textContent = totalValue;
-};
+let start = document.getElementById("startBtn").onclick = function(){
+    //first will need code that generates a random number
+    const max = 100;
+    const min = 1;
+    const answer = Math.floor(Math.random() * max + min);
+    let running = true;
+    let guess;
+    //then loop for guesses
+    while(running){
+        guess = window.prompt("guess number between 1 - 100")
+        guess = Number(guess)
+        alert(guess);
+    };
 
 
+    
+}
