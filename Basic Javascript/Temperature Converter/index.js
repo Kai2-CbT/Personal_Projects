@@ -1,4 +1,5 @@
 //first read the input from the textbox
+//this coulld have just been called directly in the html
 document.getElementById("calculate").onclick = function(){
     //save value as a variable
     let initial = document.getElementById("textbox").value;
