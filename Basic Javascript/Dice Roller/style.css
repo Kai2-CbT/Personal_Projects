@@ -1,2 +1,6 @@
 
 /* Use # for id, . for class, tagname for regular tags*/
+img {
+    max-width: 10%;
+    height: auto;
+}
