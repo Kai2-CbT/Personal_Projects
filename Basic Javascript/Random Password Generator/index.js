@@ -23,7 +23,6 @@ function generatePassword(passwordLength, lowercase, uppercase, numbers, symbols
             allowedChars += lowerCaseChars;
         }
 
-
         if(uppercase){
             allowedChars += upperCaseChars;
         }
@@ -31,7 +30,6 @@ function generatePassword(passwordLength, lowercase, uppercase, numbers, symbols
         if(numbers){
             allowedChars += nums;
         }
-
 
         if(symbols){
             allowedChars += syms;
@@ -41,9 +39,12 @@ function generatePassword(passwordLength, lowercase, uppercase, numbers, symbols
 
         //now need to add a loop that adds only to length
         for(let i = 0; i < passwordLength; i++){
+            //set variable to hold random number x allowed character length
             const randomindex = Math.floor(Math.random() * allowedChars.length);
+            //use that random number to select  that position in the array of allowed characters
             finalpassword += allowedChars[randomindex];
         }
+        //once done looping, replace label with generated password
         document.getElementById("password").textContent = finalpassword;
 
 
